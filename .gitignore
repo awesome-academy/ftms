@@ -11,5 +11,5 @@ npm-debug.log
 yarn-error.log
 /storage/framework
 /public/svg/
-/.idea
+.idea
 /storage/app
