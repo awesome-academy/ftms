@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -27,4 +27,17 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $table = "users";
+    protected $primaryKey = "id";
+
+    public function user_course()
+    {
+        return $this->hasMany(User_Course::class, 'id_user', 'id');
+    }
+
+    public function activity_history()
+    {
+        return $this->hasMany(Activity::class, 'id_user', 'id');
+    }
 }
