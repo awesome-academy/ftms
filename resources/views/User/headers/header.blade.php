@@ -26,23 +26,22 @@
                         </nav>
                         <div class="pull-right">
                             <span class="float-left">@lang('home.hello'){{ auth()->user()->name }}</span>
-                                <div class="avatar-dropdown-menu float-right">
-                                    <div class="avatar-image">
-                                        <img src="{{ asset('image/avatar').'/'.auth()->user()->avatar }}">
-                                    </div>
-                                    <div class="avatar-dropdown-menu-items">
-                                        <ul>
-                                            <li>
-                                                <a href="{{ route('edit_profile') }}">@lang('home.myProfile')</a>
-                                            </li>
-                                            <li>
-                                                <a href="">@lang('home.changePassword')</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('logout') }}">@lang('home.logout')</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <div class="avatar-dropdown-menu float-right">
+                                <div class="avatar-image">
+                                    <img src="{{ asset('image/avatar').'/'.auth()->user()->avatar }}">
+                                </div>
+                                <div class="avatar-dropdown-menu-items">
+                                    <ul>
+                                        <li>
+                                            <a href="{{ route('edit_profile') }}">@lang('home.myProfile')</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('change_password') }}">@lang('home.changePassword')</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('logout') }}">@lang('home.logout')</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

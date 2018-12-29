@@ -40,7 +40,6 @@
         </div>
     </div>
 
-    <!-- Start footer copyright area -->
     <div class="footer-copyright-area bg-gray">
         <div class="container">
             <div class="row">

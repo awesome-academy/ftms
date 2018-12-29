@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProfileRequest;
 use Illuminate\Support\Facades\Session;
+use App\Http\Requests\ChangePasswordRequest;
+use Illuminate\Support\Facades\Hash;
 
 class EditProfile extends Controller
 {
@@ -47,5 +49,25 @@ class EditProfile extends Controller
         }
 
         return $photoName;
+    }
+
+    public function getChangePassword()
+    {
+        return view('User.profile.change_password');
+    }
+
+    public function postChangePassword(ChangePasswordRequest $request)
+    {
+        if(Hash::check($request->old_password, auth()->user()->getAuthPassword()))
+        {
+            $user = User::find(auth()->id());
+            $user->password = bcrypt($request->new_password);
+            $user->save();
+            Session::flash('success', trans('profile.success'));
+        }else{
+            Session::flash('status', trans('profile.old_password_incorrect'));
+        }
+
+        return redirect()->route('post_change_password');
     }
 }
