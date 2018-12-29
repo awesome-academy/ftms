@@ -1,5 +1,4 @@
 <footer id="footer" class="site-footer">
-    <!-- Start footer widgets area -->
     <div class="footer-widgets-area">
         <div class="container">
             <div class="row">
@@ -41,6 +40,7 @@
         </div>
     </div>
 
+    <!-- Start footer copyright area -->
     <div class="footer-copyright-area bg-gray">
         <div class="container">
             <div class="row">

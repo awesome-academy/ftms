@@ -142,3 +142,7 @@ ul{
 #login_section{
    background-image: url('/image/header/p-header3.jpg') ;
 }
+
+#profile_section{
+    background-image: url('/image/header/p-header1.jpg');
+}
