@@ -17,6 +17,7 @@
     {{ Html::style(asset('css/themify-icons.css')) }}
     {{ Html::style(asset('css/plugins.css')) }}
     {{ Html::style(asset('css/app.css')) }}
+    {{ Html::style(asset('css/custom.css')) }}
     {{ Html::script(asset('js/modernizr-2.8.3.min.js')) }}
 
 </head>
@@ -29,10 +30,11 @@
     @include('User.footers.footer')
     <!-- END FOOTER section -->
     <!-- jQuery Latest Version -->
+    {{ Html::script(asset('js/app.js')) }}
     {{ Html::script(asset('js/popper.min.js')) }}
     {{ Html::script(asset('js/bootstrap.min.js')) }}
     {{ Html::script(asset('js/plugins.js')) }}
     {{ Html::script(asset('js/main.js')) }}
-
+    {{ Html::script(asset('js/custom.js')) }}
 </body>
 </html>
