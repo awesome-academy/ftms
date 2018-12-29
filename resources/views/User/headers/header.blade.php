@@ -23,7 +23,7 @@
                                 <li class="dropdown-trigger"><a href="#">@lang('home.blog')</a>
                                 </li>
                             </ul>
-                        </nav><!--/.menu-->
+                        </nav>
                         <div class="pull-right">
                             <span class="float-left">@lang('home.hello'){{ auth()->user()->name }}</span>
                             <div class="avatar-dropdown-menu float-right">
@@ -36,7 +36,7 @@
                                             <a href="{{ route('edit_profile') }}">@lang('home.myProfile')</a>
                                         </li>
                                         <li>
-                                            <a href="">@lang('home.changePassword')</a>
+                                            <a href="{{ route('change_password') }}">@lang('home.changePassword')</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('logout') }}">@lang('home.logout')</a>

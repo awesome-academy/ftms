@@ -1,5 +1,4 @@
 <footer id="footer" class="site-footer">
-    <!-- Start footer widgets area -->
     <div class="footer-widgets-area">
         <div class="container">
             <div class="row">

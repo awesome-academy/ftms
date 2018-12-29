@@ -24,9 +24,10 @@ class ProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'address' => 'required',
-            'phone' => 'required',
+            'name' => 'required|max:100',
+            'address' => 'required|max:255',
+            'phone' => 'required|max:12',
+            'new_avatar' => 'image|max:1024',
         ];
     }
 
@@ -36,6 +37,10 @@ class ProfileRequest extends FormRequest
             'name.required' => trans('profile.name_required'),
             'address.required' => trans('profile.address_required'),
             'phone.required' => trans('profile.phone_required'),
+            'name.max' => trans('profile.name_max'),
+            'address.max' => trans('profile.address_max'),
+            'phone.max' => trans('profile.phone_max'),
+            'new_avatar.max' => trans('profile.image_max'),
         ];
     }
 }
