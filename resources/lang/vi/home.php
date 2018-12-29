@@ -34,5 +34,10 @@ return [
     'Testimonial'  => 'Lời chứng thực',
     'Subscribe'  => 'Đăng kí',
     'Screen'  => 'Màn hình',
-
+    'Logout' => 'Đăng xuất',
+    'admin' => 'Admin',
+    'supervisor' => 'Supervisor',
+    'trainee' => 'Trainee',
+    'male' => 'Nam',
+    'female' => '',
 ];

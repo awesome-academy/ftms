@@ -10,12 +10,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//login
+Route::get('/', [
+    'as' => 'getLogin',
+    'uses' => 'Login@index'
+]);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('/', [
+    'as' => 'postLogin',
+    'uses' => 'Login@postLogin'
+]);
+//end login
+
+Route::get('/logout', [
+   'as' => 'logout',
+   'uses' => 'Login@getLogout'
+]);
 
 Route::get('index',[
 	'as'=>'getIndex',
 	'uses'=>'Home@getIndex'
-]);
+])->middleware('checkLogin');
