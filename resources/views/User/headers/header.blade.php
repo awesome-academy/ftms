@@ -14,7 +14,7 @@
                             <ul id="nav">
                                 <li class="dropdown-trigger"><a href="#">@lang('home.home')</a>
                                 </li>
-                                <li class="dropdown-trigger"><a href="#">Courses@lang('home.Courses')</a>
+                                <li class="dropdown-trigger"><a href="#">@lang('home.Courses')</a>
                                 </li>
                                 <li class="dropdown-trigger"><a href="#">@lang('home.Events')</a>
                                 </li>

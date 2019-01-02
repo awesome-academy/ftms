@@ -2161,6 +2161,15 @@ ul.dropdown-content > .dropdown-trigger:hover > ul.dropdown-content > li:hover >
     background-position: left bottom;
     bottom: 50px;
 }
+#member_Profile{
+    background-image: url('/image/header/p-header3.jpg');
+}
+#imgSubject{
+    background-image: url('/image/header/p-header4.jpg');
+}
+#imgSubject{
+    background-image: url('/image/welcome-bg2.jpg');
+}
 .coming-soon-page:after {
     background-image: url(images/coming-soon/book-pen.png);
     right: 30px;

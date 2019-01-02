@@ -31,3 +31,19 @@ Route::get('index',[
 	'as'=>'getIndex',
 	'uses'=>'Home@getIndex'
 ])->middleware('checkLogin');
+]);
+
+Route::get('memberProfile/{id}',[
+	'as'=>'getMemberProfile',
+	'uses'=>'Home@getMemberProfile'
+]);
+
+Route::get('subject/{id}',[
+	'as'=>'getSubject',
+	'uses'=>'Home@getSubject'
+]);
+
+Route::post('task/{id}',[
+	'as'=>'postTask',
+	'uses'=>'Home@postTask'
+]);
