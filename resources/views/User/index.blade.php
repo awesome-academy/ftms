@@ -158,41 +158,22 @@
         <div class="row justify-content-md-center">
             <div class="col-lg-8">
                 <div class="section-heading-area text-center">
-                    <h2 class="section-heading text-capitalize">Frequently Asked Questions</h2>
+                    <h2 class="section-heading text-capitalize">@lang('home.calendar')</</h2>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 col-sm-12">
-                <div class="sengle-faq">
-                    <span class="faq-number">A</span>
-                    <div class="sengle-faq-content">
-                        <h3>Officia deserunt mollit anim est laborum?</h3>
-                        <P>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem. </p>
-                    </div>
-                </div>
-                <div class="sengle-faq">
-                    <span class="faq-number">C</span>
-                    <div class="sengle-faq-content">
-                        <h3>Excepteur sint occaecat cupidatat?</h3>
-                        <P>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-12">
-                <div class="sengle-faq">
-                    <span class="faq-number">B</span>
-                    <div class="sengle-faq-content">
-                        <h3>Sed ut perspiciatis unde omnis?</h3>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                    </div>
-                </div>
-                <div class="sengle-faq">
-                    <span class="faq-number">D</span>
-                    <div class="sengle-faq-content">
-                        <h3>Duis aute irure dolor in reprehenderit?</h3>
-                        <p>Quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <div class="single-blog-page page-wrapper bg-gray s-pd100">
+            <div class="blog-page-content">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <ul class="timeline">
+                            @foreach($getSubjects as $getSubject)
+                                <li>
+                                    <h2>{{$getSubject->name}}</h2>
+                                    <h3><a href="">Start</a>  {{$getSubject->start_subject}}</h3>
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -200,7 +181,7 @@
     </div>
 </section>
 <section id="blog-section" class="blog-section-area bg-gray s-pd2">
-    <div class="container">
+    <div class="container center">
         <div class="row justify-content-md-center">
             <div class="col-lg-8">
                 <div class="section-heading-area text-center">

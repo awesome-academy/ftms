@@ -21,4 +21,5 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/font-awesome.min.scss', 'public/css');
    .sass('resources/sass/plugins.scss', 'public/css');
    .sass('resources/sass/style.scss', 'public/css');
+   .sass('resources/sass/timeLine.scss', 'public/css');
    .sass('resources/sass/themify-icons.scss', 'public/css');

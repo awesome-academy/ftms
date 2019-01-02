@@ -17,37 +17,37 @@ class HomeHelper {
      * @return string
      */
     public static function getIdOfCourse($IdUser) {
-        $getId = User::select('user_courses.id_course as IdCou')->join('user_courses','users.id','=','user_courses.id_user')->where('user_courses.id_user',$IdUser)->first();
+        $getId = User::select('user_courses.id_course as IdCou')->join('user_courses', 'users.id', '=', 'user_courses.id_user')->where('user_courses.id_user', $IdUser)->first();
         return $getId;
     }
 
     public static function getMemberOfCourse($IdCourse) {
-        $getMemberOfCourses = User::join('user_courses','users.id','=','user_courses.id_user')->where('user_courses.id_course',$IdCourse)->get();
+        $getMemberOfCourses = User::join('user_courses', 'users.id', '=', 'user_courses.id_user')->where('user_courses.id_course', $IdCourse)->get();
         return $getMemberOfCourses;
     }
 
     public static function getCourseOfUser($IdCourse) {
-        $getUserCourse = Course::where('id',$IdCourse)->first();
+        $getUserCourse = Course::where('id', $IdCourse)->first();
         return $getUserCourse;
     }
 
     public static function getSubjectOfUser($IdCourse) {
-        $getSubjectOfUsers = Subject::select('subjects.id as IdSub','subjects.name')->join('course_subjects','subjects.id','=','course_subjects.id_subject')->where('course_subjects.id_course',$IdCourse)->get();
+        $getSubjectOfUsers = Subject::select('subjects.id as IdSub', 'subjects.name', 'subjects.start_subject')->join('course_subjects', 'subjects.id', '=', 'course_subjects.id_subject')->where('course_subjects.id_course', $IdCourse)->get();
         return $getSubjectOfUsers;
     }
 
     public static function getProfileMemberOfCourse($IdCourse) {
-        $getProfileMemberOfCourses = User::where('id',$IdCourse)->first();
+        $getProfileMemberOfCourses = User::where('id', $IdCourse)->first();
         return $getProfileMemberOfCourses;
     }
 
     public static function getSubjectDetail($IdSubject) {
-        $getSubjectDetail = Subject::where('subjects.id',$IdSubject)->first();
+        $getSubjectDetail = Subject::where('subjects.id', $IdSubject)->first();
         return $getSubjectDetail;
     }
 
     public static function getTaskDetail($IdSubject) {
-        $getTasks = Task::where('tasks.id_subject',$IdSubject)->get();
+        $getTasks = Task::where('tasks.id_subject', $IdSubject)->get();
         return $getTasks;
     }
 }

@@ -40,11 +40,11 @@
                                     <h2><span class="fa fa-ticket"></span>@lang('home.report')</h2>
                                 </div>
                                 @include('User.commons.errors')
-                                {!! Form::open(['route' => ['postTask',$subject->id], 'method' => 'POST']) !!}
+                                {!! Form::open(['route' => ['postTask', $subject->id], 'method' => 'POST']) !!}
                                     <div class="modal-body">
                                         <div class="form-group">
                                             {!! Form::label('title', trans('home.title2'), ['class' => 'col-form-label']) !!}
-                                            {!! Form::text('title', '' , ['class' => 'form-control', 'placeholder' => trans('home.titlePl'), 'id' => 'recipient-name']) !!}
+                                            {!! Form::text('title', '', ['class' => 'form-control', 'placeholder' => trans('home.titlePl'), 'id' => 'recipient-name']) !!}
                                         </div>
                                         <div class="form-group">
                                             {!! Form::label('description', trans('home.description'), ['class' => 'col-form-label']) !!}
@@ -81,7 +81,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="blog-button text-center">
-                    <a href="#" class="btn btn-default btn-primary">@lang('home.finish')</a>
+                    @if($subject->status == config('setting.default'))
+                        <a href="#" class="btn btn-default btn-success">@lang('home.btnDone')</a>
+                    @else
+                        {!! Form::open(['route'=>['postFinish',$subject->id],'method' => 'POST']) !!}
+                            {!! Form::submit(trans('home.finish'), ['class' => 'btn btn-default btn-primary']) !!}
+                        {!! Form::close() !!}
+                    @endif
                 </div>
             </div>
         </div>

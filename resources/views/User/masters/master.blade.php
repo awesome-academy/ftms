@@ -8,6 +8,7 @@
     <!--========== Specific Meta ==========-->
     <meta name="description" content="Online Education template Based on HTML5.">
     <meta name="keywords" content="HTML5, Template, Design, Development, education, edulab, online cources, training, online education, best education template">
+
     <!--======== Page Title===========-->
     <title>@lang('home.title')</title>
     <!--========== Favicons =========-->
@@ -17,6 +18,7 @@
     {{ Html::style(asset('css/themify-icons.css')) }}
     {{ Html::style(asset('css/plugins.css')) }}
     {{ Html::style(asset('css/app.css')) }}
+    {{ Html::style(asset('css/timeLine.css')) }}
     {{ Html::script(asset('js/modernizr-2.8.3.min.js')) }}
 </head>
 <body>

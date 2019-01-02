@@ -28,22 +28,26 @@ Route::get('/logout', [
 ]);
 
 Route::get('index',[
-	'as'=>'getIndex',
-	'uses'=>'Home@getIndex'
+	'as' => 'getIndex',
+	'uses' => 'Home@getIndex'
 ])->middleware('checkLogin');
-]);
 
 Route::get('memberProfile/{id}',[
-	'as'=>'getMemberProfile',
-	'uses'=>'Home@getMemberProfile'
+	'as' => 'getMemberProfile',
+	'uses' => 'Home@getMemberProfile'
 ]);
 
 Route::get('subject/{id}',[
-	'as'=>'getSubject',
-	'uses'=>'Home@getSubject'
+	'as' => 'getSubject',
+	'uses' => 'Home@getSubject'
 ]);
 
 Route::post('task/{id}',[
-	'as'=>'postTask',
-	'uses'=>'Home@postTask'
+	'as' => 'postTask',
+	'uses' => 'Home@postTask'
+]);
+
+Route::post('finish/{id}',[
+	'as' => 'postFinish',
+	'uses' => 'Home@postFinish'
 ]);

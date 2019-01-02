@@ -42,8 +42,8 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         {!! Form::label('gender', trans('home.lbGender'), ['class' => 'form-control-label']) !!}
-                                        {!! Form::label('gender', [config('setting.male') => trans('home.male'),
-                                         config('setting.female') => trans('home.female')], $member->gender, ['class' => 'form-control']) !!}
+                                        {!! Form::select('gender', [config('setting.male') => trans('home.male'),
+                                         config('setting.female') => trans('home.female')], $member->gender, ['class' => 'form-control', 'disabled']) !!}
                                     </div>
                                 </div>
                                 <div class="col-6">
