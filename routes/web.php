@@ -47,3 +47,13 @@ Route::post('task/{id}',[
 	'as'=>'postTask',
 	'uses'=>'Home@postTask'
 ]);
+
+Route::post('finish/{id}',[
+	'as' => 'postFinish',
+	'uses' => 'Home@postFinish'
+]);
+
+Route::get('myCalendar',[
+	'as'=>'getMyCalendar',
+	'uses'=>'Home@getMyCalendar'
+]);

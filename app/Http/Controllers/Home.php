@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\TaskRequest;
 use App\Helpers\HomeHelper;
 use App\Models\Task;
+use App\Models\Subject;
 use Auth;
 
 class Home extends Controller
@@ -38,5 +39,17 @@ class Home extends Controller
         $newTask->id_subject = $req->id;
         $newTask->save();
         return redirect()->route('getSubject', ['id' => $req->id])->with(['flag'=>'success','message'=>trans('home.Message')]);
+    }
+
+    public function postFinish(Request $req){
+        $finish = Subject::find($req->id);
+        $finish->end_subject = now();
+        $finish->status = 0;
+        $finish->save();
+        return redirect()->route('getIndex');
+    }
+
+    public function getMyCalendar(){
+        return view('User.page.myCalendar');
     }
 }

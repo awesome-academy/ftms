@@ -65,5 +65,6 @@ return [
     'lbBirthay'  => 'Birthday',
     'male'  => 'Male',
     'female'  => 'Female',
+    'calendar'  => 'My training calendar',
 
 ];

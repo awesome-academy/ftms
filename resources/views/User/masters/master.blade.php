@@ -8,6 +8,9 @@
     <!--========== Specific Meta ==========-->
     <meta name="description" content="Online Education template Based on HTML5.">
     <meta name="keywords" content="HTML5, Template, Design, Development, education, edulab, online cources, training, online education, best education template">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--======== Page Title===========-->
     <title>@lang('home.title')</title>
     <!--========== Favicons =========-->

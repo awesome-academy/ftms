@@ -65,5 +65,6 @@ return [
     'lbBirthay'  => 'Ngày sinh',
     'male'  => 'Nam',
     'female'  => 'Nữ',
+    'calendar'  => 'Lịch đào tạo của tôi',
 
 ];

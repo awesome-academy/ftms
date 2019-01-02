@@ -81,7 +81,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="blog-button text-center">
-                    <a href="#" class="btn btn-default btn-primary">@lang('home.finish')</a>
+                    @if($subject->status == config('setting.default'))
+                        <a href="#" class="btn btn-default btn-success">@lang('home.btnDone')</a>
+                    @else
+                        {!! Form::open(['route'=>['postFinish',$subject->id],'method' => 'POST']) !!}
+                            {!! Form::submit(trans('home.finish'), ['class' => 'btn btn-default btn-primary']) !!}
+                        {!! Form::close() !!}
+                    @endif
                 </div>
             </div>
         </div>
