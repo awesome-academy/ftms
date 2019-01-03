@@ -31,6 +31,8 @@ class User extends Authenticatable
     protected $table = "users";
     protected $primaryKey = "id";
 
+    protected $appends = ['custom_role', 'custom_gender'];
+
     public function user_course()
     {
         return $this->hasMany(User_Course::class, 'id_user', 'id');
@@ -39,5 +41,43 @@ class User extends Authenticatable
     public function activity_history()
     {
         return $this->hasMany(Activity::class, 'id_user', 'id');
+    }
+
+    public function setRoleAttribute($value)
+    {
+        $this->attributes['role'] = $value;
+    }
+
+    public function getCustomRoleAttribute()
+    {
+        if ($this->role == config('setting.trainee'))
+        {
+            return trans('home.trainee');
+        }
+
+        if ($this->role == config('setting.supervisor')) {
+            return trans('home.supervisor');
+        }
+
+        if ($this->role == config('setting.admin')) {
+            return trans('home.admin');
+        }
+    }
+
+    public function setGenderAttribute($value)
+    {
+        $this->attributes['gender'] = $value;
+    }
+
+    public function getCustomGenderAttribute()
+    {
+        if ($this->gender == config('setting.male'))
+        {
+            return trans('home.male');
+        }
+
+        if ($this->role == config('setting.female')) {
+            return trans('home.female');
+        }
     }
 }

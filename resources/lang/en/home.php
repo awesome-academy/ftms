@@ -34,5 +34,10 @@ return [
     'Testimonial'  => 'Testimonial',
     'Subscribe'  => 'Subscribe',
     'Screen'  => 'Screen Shot',
-
+    'logout' => 'Logout',
+    'admin' => 'Admin',
+    'supervisor' => 'Supervisor',
+    'trainee' => 'Trainee',
+    'male' => 'Male',
+    'female' => 'Female',
 ];
