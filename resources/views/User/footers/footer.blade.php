@@ -16,7 +16,7 @@
                 </div><!--/.col-lg-3-->
                 <div class="col-lg-3 col-sm-6 col-6">
                     <div class="footer-widget">
-                        <h4 class="footer-title">Navigation@lang('home.NAVIGATION')</h4>
+                        <h4 class="footer-title">@lang('home.NAVIGATION')</h4>
                         <ul class="footer-widget-list list-unstyled">
                             <li><a href="#">@lang('home.Screen')</a></li>
                             <li><a href="#">@lang('home.how')</a></li>
