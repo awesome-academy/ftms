@@ -26,7 +26,7 @@ Route::get('logout', [
    'uses' => 'Login@getLogout'
 ]);
 
-Route::get('/logout', [
+Route::get('logout', [
    'as' => 'logout',
    'uses' => 'Login@getLogout'
 ]);

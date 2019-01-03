@@ -1,6 +1,6 @@
 @extends('User.masters.master')
 @section('content')
-    <section class="page-heading-section before-bg bg-image" id="login_section">
+    <section class="page-heading-section before-bg bg-image" id="profile_section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -43,8 +43,8 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         {!! Form::label('gender', trans('profile.lbGender'), ['class' => 'form-control-label']) !!}
-                                        {!! Form::select('gender', [config('setting.male') => trans('home.male'),
-                                         config('setting.female') => trans('home.female')], auth()->user()->gender, ['class' => 'form-control']) !!}
+                                        {!! Form::select('gender', [config('setting.male') => trans('profile.male'),
+                                         config('setting.female') => trans('profile.female')], auth()->user()->gender, ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="col-6">
