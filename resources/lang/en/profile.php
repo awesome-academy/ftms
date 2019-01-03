@@ -1,0 +1,21 @@
+<?php
+return [
+    'profile' => 'Profile',
+    'lbName' => 'Name',
+    'lbAddress' => 'Address',
+    'lbPhone' => 'Phone',
+    'lbEmail' => 'Email',
+    'lbGender' => 'Gender',
+    'lbBirthday' => 'Birthday',
+    'plName' => 'Please, enter name',
+    'plAddress' => 'Please, enter address',
+    'plPhone' => 'Please, enter phone number',
+    'plEmail' => 'Please, enter email',
+    'Male' => 'Male',
+    'Female' => 'Female',
+    'btnSave' => 'Save',
+    'name_required' => 'The name field is required.',
+    'address_required' => 'The address field is required.',
+    'phone_required' => 'The phone field is required.',
+    'success' => 'Update successful',
+];

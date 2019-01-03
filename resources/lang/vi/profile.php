@@ -1,0 +1,21 @@
+<?php
+return [
+    'profile' => 'Hồ sơ',
+    'lbName' => 'Tên',
+    'lbAddress' => 'Địa chỉ',
+    'lbPhone' => 'Số điện thoại',
+    'lbEmail' => 'Email',
+    'lbGender' => 'Giới tính',
+    'lbBirthday' => 'Ngày sinh',
+    'plName' => 'Nhập họ tên',
+    'plAddress' => 'Nhập địa chỉ',
+    'plPhone' => 'Nhập số điện thoại',
+    'plEmail' => 'Nhập email',
+    'Male' => 'Nam',
+    'Female' => 'Nữ',
+    'btnSave' => 'Lưu',
+    'name_required' => 'Tên không được để trống.',
+    'address_required' => 'Địa chỉ không được bỏ trống.',
+    'phone_required' => 'Số điện thoại không được bỏ trống.',
+    'success' => 'Cập nhật thành công',
+];

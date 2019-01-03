@@ -21,6 +21,10 @@ Route::post('/', [
     'uses' => 'Login@postLogin'
 ]);
 //end login
+Route::get('logout', [
+   'as' => 'logout',
+   'uses' => 'Login@getLogout'
+]);
 
 Route::get('/logout', [
    'as' => 'logout',
@@ -30,4 +34,14 @@ Route::get('/logout', [
 Route::get('index',[
 	'as'=>'getIndex',
 	'uses'=>'Home@getIndex'
+])->middleware('checkLogin');
+
+Route::get('edit_profile', [
+    'as' => 'edit_profile',
+    'uses' => 'EditProfile@index',
+])->middleware('checkLogin');
+
+Route::post('edit_profile', [
+    'as' => 'post_edit_profile',
+    'uses' => 'EditProfile@edit',
 ])->middleware('checkLogin');
