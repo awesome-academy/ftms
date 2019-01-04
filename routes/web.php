@@ -21,7 +21,6 @@ Route::post('/', [
     'uses' => 'Login@postLogin'
 ]);
 //end login
-
 Route::get('logout', [
    'as' => 'logout',
    'uses' => 'Login@getLogout'
@@ -46,7 +45,20 @@ Route::get('change-password', [
     'as' => 'change_password',
     'uses' => 'EditProfile@getChangePassword'
 ])->middleware('checkLogin');
+
 Route::post('change-password', [
     'as' => 'post_change_password',
     'uses' => 'EditProfile@postChangePassword'
 ])->middleware('checkLogin');
+
+Route::group(['middleware' => 'checkLoginAdmin'], function (){
+    Route::get('supervisor', [
+        'as' => 'supervisor',
+        'uses' => 'Admin@viewSupervisor',
+    ]);
+
+    Route::get('trainee', [
+        'as' => 'trainee',
+        'uses' => 'Admin@viewTrainee',
+    ]);
+});
