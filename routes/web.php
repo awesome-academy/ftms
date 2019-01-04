@@ -21,10 +21,6 @@ Route::post('/', [
     'uses' => 'Login@postLogin'
 ]);
 //end login
-Route::get('logout', [
-   'as' => 'logout',
-   'uses' => 'Login@getLogout'
-]);
 
 Route::get('logout', [
    'as' => 'logout',
@@ -44,4 +40,13 @@ Route::get('edit_profile', [
 Route::post('edit_profile', [
     'as' => 'post_edit_profile',
     'uses' => 'EditProfile@edit',
+])->middleware('checkLogin');
+
+Route::get('change-password', [
+    'as' => 'change_password',
+    'uses' => 'EditProfile@getChangePassword'
+])->middleware('checkLogin');
+Route::post('change-password', [
+    'as' => 'post_change_password',
+    'uses' => 'EditProfile@postChangePassword'
 ])->middleware('checkLogin');
