@@ -19,6 +19,7 @@
     {{ Html::style(asset('css/app.css')) }}
     {{ Html::style(asset('css/custom.css')) }}
     {{ Html::script(asset('js/modernizr-2.8.3.min.js')) }}
+    {{ Html::style(asset('css/history.css')) }}
 
 </head>
 <body>

@@ -14,9 +14,9 @@
                             <ul id="nav">
                                 <li class="dropdown-trigger"><a href="#">@lang('home.home')</a>
                                 </li>
-                                <li class="dropdown-trigger"><a href="#">@lang('home.courses')</a>
+                                <li class="dropdown-trigger"><a href="{{route('getMyCurrent')}}">@lang('home.courses')</a>
                                 </li>
-                                <li class="dropdown-trigger"><a href="#">@lang('home.events')</a>
+                                <li class="dropdown-trigger"><a href="{{route('getActivityCourse')}}">@lang('home.history')</a>
                                 </li>
                                 <li class="dropdown-trigger"><a href="#">@lang('home.pages')</a>
                                 </li>

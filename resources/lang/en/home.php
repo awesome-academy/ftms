@@ -2,7 +2,7 @@
 return [
     'title' => 'Framgia-Training System',
     'home'  => 'Home',
-    'courses'  => 'Courses',
+    'courses'  => 'Current',
     'events'  => 'Events',
     'pages'  => 'Pages',
     'blog'  => 'Blog',
@@ -43,4 +43,6 @@ return [
     'trainee' => 'Trainee',
     'male' => 'Male',
     'female' => 'Female',
+    'history' => 'History of Courses',
+
 ];
