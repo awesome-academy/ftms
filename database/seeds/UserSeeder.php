@@ -20,7 +20,6 @@ class UserSeeder extends Seeder
             'phone' => '031313121',
             'birthday' => now(),
             'address' => str_random(30),
-            'avatar' => 'default.jpg',
             'role' => 1,
         ]);
 
@@ -32,7 +31,6 @@ class UserSeeder extends Seeder
             'phone' => '031313121',
             'birthday' => now(),
             'address' => str_random(30),
-            'avatar' => 'default.jpg',
             'role' => 1,
         ]);
     }
