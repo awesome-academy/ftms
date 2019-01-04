@@ -43,4 +43,6 @@ return [
     'myProfile' => 'Hồ sơ của tôi',
     'changePassword' => 'Thay đổi mật khẩu',
     'hello' => 'Xin chào, ',
+    'history' => 'Lich su khoa hoc',
+
 ];
