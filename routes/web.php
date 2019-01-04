@@ -25,6 +25,7 @@ Route::post('/', [
 Route::get('logout', [
    'as' => 'logout',
    'uses' => 'Login@getLogout'
+
 ]);
 
 Route::group(['middleware' => 'checkLogin'], function () {
