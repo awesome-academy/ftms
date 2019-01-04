@@ -6,4 +6,6 @@ return [
     'admin' => 3,
     'male' => 1,
     'female' => 2,
+    'date_format' => 'd/m/Y',
+    'paginate' => 10,
 ];
