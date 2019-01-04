@@ -8,6 +8,7 @@ class Subject extends Model
 {
     protected $table = "subjects";
     protected $primaryKey = "id";
+    public $timestamps = false;
 
     public function course_subject()
     {
