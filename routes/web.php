@@ -50,3 +50,15 @@ Route::post('change-password', [
     'as' => 'post_change_password',
     'uses' => 'EditProfile@postChangePassword'
 ])->middleware('checkLogin');
+
+Route::group(['middleware' => 'checkLoginAdmin'], function (){
+    Route::get('supervisor', [
+        'as' => 'supervisor',
+        'uses' => 'Admin@viewSupervisor',
+    ]);
+
+    Route::get('trainee', [
+        'as' => 'trainee',
+        'uses' => 'Admin@viewTrainee',
+    ]);
+});

@@ -23,6 +23,8 @@ class Login extends Controller
         if(Auth::attempt($login)){
             if(auth()->user()->role == config('setting.trainee')){
                 return redirect()->route('getIndex');
+            }else{
+                return redirect()->route('supervisor');
             }
         }else{
             return redirect()->back()->with('status', trans('login.status'))->withInput();
