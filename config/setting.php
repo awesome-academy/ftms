@@ -8,4 +8,7 @@ return [
     'female' => 2,
     'date_format' => 'd/m/Y',
     'paginate' => 10,
+    'open_course' => 1,
+    'active_course' => 2,
+    'close_course' => 3,
 ];

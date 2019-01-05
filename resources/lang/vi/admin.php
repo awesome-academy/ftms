@@ -16,4 +16,13 @@ return [
     'address' => 'địa chỉ',
     'action' => 'hành động',
     'add' => 'Thêm',
+    'course' => 'Khóa học',
+    'open_course' => 'Mở',
+    'active_course' => 'Đang diễn ra',
+    'close_course' => 'Close',
+    'course_name' => 'tên khóa học',
+    'course_description' => 'mô tả',
+    'course_status' => 'trạng thái',
+    'started_at' => 'ngày bắt đầu',
+    'finished_at' => 'ngày kết thúc',
 ];
