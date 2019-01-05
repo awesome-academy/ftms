@@ -17,7 +17,7 @@ class CreateSubjectsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->dateTime('start_subject');
-            $table->dateTime('end_subject');
+            $table->dateTime('end_subject')->nullable();
             $table->tinyInteger('status');
         });
     }
