@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Carbon;
 
 class User extends Authenticatable
 {
@@ -32,6 +33,7 @@ class User extends Authenticatable
     protected $primaryKey = "id";
 
     protected $appends = ['custom_role', 'custom_gender'];
+    protected $dates = ['custom_birthday'];
 
     public function user_course()
     {
@@ -52,14 +54,13 @@ class User extends Authenticatable
     {
         if ($this->role == config('setting.trainee'))
         {
+
             return trans('home.trainee');
-        }
+        } elseif ($this->role == config('setting.supervisor')) {
 
-        if ($this->role == config('setting.supervisor')) {
             return trans('home.supervisor');
-        }
+        } else {
 
-        if ($this->role == config('setting.admin')) {
             return trans('home.admin');
         }
     }
@@ -73,11 +74,16 @@ class User extends Authenticatable
     {
         if ($this->gender == config('setting.male'))
         {
-            return trans('home.male');
-        }
 
-        if ($this->role == config('setting.female')) {
+            return trans('home.male');
+        } else {
+
             return trans('home.female');
         }
+    }
+
+    public function getCustomBirthdayAttribute()
+    {
+        return Carbon::parse($this->birthday)->format(config('setting.date_format'));
     }
 }

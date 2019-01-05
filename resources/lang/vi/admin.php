@@ -8,4 +8,12 @@ return [
     'admin' => 'Admin',
     'trainee' => 'Học viên',
     'supervisor' => 'Người hướng dẫn',
+    'name' => 'tên',
+    'email' => 'email',
+    'role' => 'vai trò',
+    'gender' => 'giới tính',
+    'birthday' => 'ngày sinh',
+    'address' => 'địa chỉ',
+    'action' => 'hành động',
+    'add' => 'Thêm',
 ];
