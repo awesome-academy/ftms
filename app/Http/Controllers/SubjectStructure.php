@@ -3,13 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Helpers\AdminHelper;
-use App\Models\User;
-use App\Http\Requests\TraineeRequest;
-use App\Helpers\TraineeHelper;
-use App\Http\Requests\ProfileRequest;
+use App\Helpers\SubjectHelper;
+use App\Models\Subject;
+use App\Http\Requests\SubjectRequest;
 
-class Trainee extends Controller
+class SubjectStructure extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +16,7 @@ class Trainee extends Controller
      */
     public function index()
     {
-        $getTrainee = AdminHelper::getUser(config('setting.trainee'));
-
-        return view('admin.user.trainee.trainee', compact('getTrainee'));
+        //
     }
 
     /**
@@ -30,7 +26,8 @@ class Trainee extends Controller
      */
     public function create()
     {
-        return view('admin.user.trainee.addTrainee');
+
+        return view('admin.subjects.addSubject');
     }
 
     /**
@@ -39,19 +36,12 @@ class Trainee extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(TraineeRequest $req)
+    public function store(SubjectRequest $req)
     {
-        $trainee = new user();
-        $trainee->name = $req->name;
-        $trainee->address = $req->address;
-        $trainee->phone = $req->phone;
-        $trainee->email = $req->email;
-        $trainee->password = $req->password;
-        $trainee->gender = $req->gender;
-        $trainee->birthday = $req->birthday;
-        $trainee->avatar = 'default.png';
-        $trainee->role = config('setting.trainee');
-        $result = $trainee->save();
+        $sub = new Subject();
+        $sub->name = $req->name;
+        $sub->description = $req->description;
+        $result = $sub->save();
         if($result) {
 
             return redirect()->back()->with('messageAdd', trans('subject.messageAdd'));
@@ -59,7 +49,7 @@ class Trainee extends Controller
 
             return redirect()->back()->with('errorLists', trans('subject.messageError'));
         }
-    }
+     }
 
     /**
      * Display the specified resource.
@@ -81,14 +71,13 @@ class Trainee extends Controller
     public function edit($id)
     {
         try {
-            $getTrainee = TraineeHelper::getIdOfTrainee($id);
+            $getSubject = SubjectHelper::getIdOfSubject($id);
         } catch (Exception $e) {
 
             return redirect()->back()->with('errorLists', $e->getMessage());
         }
 
-        return view('admin.user.trainee.editTrainee', compact('getTrainee'));
-
+        return view('admin.subjects.editSubject', compact('getSubject'));
     }
 
     /**
@@ -98,18 +87,13 @@ class Trainee extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProfileRequest $req, $id)
+    public function update(Request $req, $id)
     {
         try {
-            $new_avatar = TraineeHelper::updateAvatar($req);
-            $user = User::findOrFail($req->id_trainee);
-            $user->name = $req->name;
-            $user->address = $req->address;
-            $user->phone = $req->phone;
-            $user->gender = $req->gender;
-            $user->birthday = $req->birthday;
-            $user->avatar = $new_avatar;
-            $result = $user->save();
+            $sub = Subject::findOrFail($req->id_subject);
+            $sub->name = $req->name;
+            $sub->description = $req->description;
+            $result = $sub->save();
             if($result) {
                 $req->session()->flash('messageUpadte', trans('subject.successEdit'));
             } else {
