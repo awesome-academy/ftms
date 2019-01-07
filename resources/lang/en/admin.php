@@ -16,4 +16,9 @@ return [
     'address' => 'address',
     'action' => 'action',
     'add' => 'Add',
+    'subject' => 'Subject',
+    'subject_name' => 'subject name',
+    'start_subject' => 'start subject',
+    'end_subject' => 'end subject',
+    'subject_status' => 'status',
 ];

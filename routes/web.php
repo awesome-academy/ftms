@@ -67,4 +67,9 @@ Route::group(['middleware' => 'checkLoginAdmin'], function (){
         'as' => 'trainee',
         'uses' => 'Admin@viewTrainee',
     ]);
+
+    Route::get('subject', [
+        'as' => 'subject.index',
+        'uses' => 'Admin@viewSubject',
+    ]);
 });

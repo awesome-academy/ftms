@@ -21,4 +21,11 @@ class Admin extends Controller
 
         return view('admin.user.trainee.trainee', compact('getTrainee'));
     }
+
+    public function viewSubject()
+    {
+        $getSubject = AdminHelper::getSubject();
+
+        return view('admin.subject.index', compact('getSubject'));
+    }
 }
