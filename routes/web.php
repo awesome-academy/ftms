@@ -56,3 +56,20 @@ Route::group(['middleware' => 'checkLogin'], function () {
         'uses' => 'History@getMyCurrent'
     ]);
 });
+
+Route::group(['middleware' => 'checkLoginAdmin'], function (){
+    Route::get('supervisor', [
+        'as' => 'supervisor',
+        'uses' => 'Admin@viewSupervisor',
+    ]);
+
+    Route::get('trainee', [
+        'as' => 'trainee',
+        'uses' => 'Admin@viewTrainee',
+    ]);
+
+    Route::get('subject', [
+        'as' => 'subject.index',
+        'uses' => 'Admin@viewSubject',
+    ]);
+});
