@@ -16,11 +16,13 @@ class CourseSeeder extends Seeder
             'name' => 'PHP',
             'description' => str_random(30),
             'status' => 1,
+            'started_at' =>now(),
         ]);
         DB::table('courses')->insert([
             'name' => 'RUBY',
             'description' => str_random(30),
             'status' => 1,
+            'started_at' =>now(),
         ]);
     }
 }

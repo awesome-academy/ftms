@@ -18,6 +18,12 @@
                         </li>
                     </ul>
                 </li>
+
+                <li class="{{ request()->routeIs('course.*') ? "active" : "" }}">
+                    <a href="{{ route('course.index') }}" aria-expanded="true">
+                        <i class="ti-book"></i><span>@lang('admin.course')</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>

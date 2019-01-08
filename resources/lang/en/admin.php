@@ -16,4 +16,13 @@ return [
     'address' => 'address',
     'action' => 'action',
     'add' => 'Add',
+    'course' => 'Course',
+    'open_course' => 'Open',
+    'active_course' => 'Active',
+    'close_course' => 'Close',
+    'course_name' => 'course name',
+    'course_description' => 'description',
+    'course_status' => 'status',
+    'started_at' => 'started at',
+    'finished_at' => 'finished at',
 ];
