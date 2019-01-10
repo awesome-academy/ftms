@@ -32,4 +32,16 @@ return [
     'confirm_password_same' => 'The confirm password field is the same new password.',
     'old_password_incorrect' => 'The  password is incorrect!!.',
     'new_password_min' => 'The password must be at least :min characters.',
+    'lblPassWord' => 'Password',
+    'btnAdd' => 'Add',
+    'btnCancel' => 'Cancel',
+    'password_required' => 'The password field is required.',
+    'password_max' => 'The password may not be greater than :max characters.',
+    'lblAddTrainee' => 'Add new trainee',
+    'messageSuccess' => 'Add trainee success',
+    'lblEditTrainee' => 'Edit trainee',
+    'btnEdit' => 'Edit',
+    'email_required' => 'The email field is required.',
+    'email_max' => 'The email field is required.',
+    'messageAdd' => 'Add succuess'
 ];

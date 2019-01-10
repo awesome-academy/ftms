@@ -59,8 +59,7 @@ Route::group(['middleware' => 'checkLogin'], function () {
 
 Route::group(['middleware' => 'checkLoginAdmin'], function (){
     Route::resource('supervisor', 'Supervisor');
-
     Route::resource('trainee', 'Trainee');
-
     Route::resource('course', 'Course');
+    Route::resource('subjectStructure', 'SubjectStructure');
 });

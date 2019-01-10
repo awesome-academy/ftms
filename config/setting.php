@@ -11,4 +11,5 @@ return [
     'open_course' => 1,
     'active_course' => 2,
     'close_course' => 3,
+    'status' => 1,
 ];

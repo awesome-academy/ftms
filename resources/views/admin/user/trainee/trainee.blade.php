@@ -5,7 +5,7 @@
             <div class="card-body">
                 <h4 class="header-title">@lang('admin.trainee')
                     @if(auth()->user()->role == config('setting.admin'))
-                        <a class="btn btn-success text-light"><i class="fa fa-plus-circle"></i> @lang('admin.add')</a>
+                        <a href="{{ route('trainee.create') }}" class="btn btn-success text-light"><i class="fa fa-plus-circle"></i> @lang('admin.add')</a>
                     @endif
                 </h4>
                 <div class="single-table">
@@ -39,7 +39,7 @@
                                     <td>{{ $value->address }}</td>
                                     <td>
                                         <ul class="d-flex justify-content-center">
-                                            <li class="mr-3"><a href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                            <li class="mr-3"><a href="{{ route('trainee.edit', $value->id) }}" class="text-secondary"><i class="fa fa-edit"></i></a></li>
                                             <li><a href="#" class="text-danger"><i class="ti-trash"></i></a></li>
                                         </ul>
                                     </td>

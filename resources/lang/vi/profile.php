@@ -32,4 +32,16 @@ return [
     'confirm_password_same' => 'mật khẩu xác nhận phải giống với mật khẩu mới.',
     'old_password_incorrect' => 'Mật khẩu cũ không chính xác!!.',
     'new_password_min' => 'Mật khẩu phải có ít nhất :min kí tự.',
+    'lblPassWord' => 'Mat khau',
+    'btnAdd' => 'Them ',
+    'btnCancel' => 'Thoat',
+    'password_required' => 'Mat khau không được để trống.',
+    'password_max' => 'Mat khau không được vượt quá :max kí tự.',
+    'lblAddTrainee' => 'Them hoc vien',
+    'messageSuccess' => 'Them hoc vien thanh cong',
+    'lblEditTrainee' => 'Chinh sua hoc vien',
+    'btnEdit' => 'Chinh sua',
+    'email_required' => 'Email khong duoc trong',
+    'email_max' => 'Email khong duoc qua ki tu cho phep',
+    'messageAdd' => 'Them thanh cong'
 ];
