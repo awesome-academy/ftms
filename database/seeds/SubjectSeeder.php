@@ -14,13 +14,11 @@ class SubjectSeeder extends Seeder
      {
          DB::table('subjects')->insert([
              'name' => 'Git',
-             'start_subject' => '2018-12-30 00:00:00',
-             'status' => 1,
+             'description' => str_random(30),
          ]);
          DB::table('subjects')->insert([
              'name' => 'MySQL',
-             'start_subject' => '2019-01-01 00:00:00',
-             'status' => 1,
+             'description' => str_random(30),
          ]);
      }
 }
