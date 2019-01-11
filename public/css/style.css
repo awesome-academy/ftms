@@ -3548,4 +3548,13 @@ ul.dropdown-content > .dropdown-trigger:hover > ul.dropdown-content > li:hover >
     .event-header .title {
         padding-left: 15px;
     }
+    #member_Profile{
+        background-image: url('/image/header/p-header3.jpg');
+    }
+    #imgSubject{
+        background-image: url('/image/header/p-header4.jpg');
+    }
+    #imgSubject{
+        background-image: url('/image/welcome-bg2.jpg');
+    }
 }
