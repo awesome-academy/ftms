@@ -25,4 +25,8 @@ return [
     'course_status' => 'status',
     'started_at' => 'started at',
     'finished_at' => 'finished at',
+    'report' => 'Report',
+    'choose' => 'Please choose the course',
+    'number' => 'Number of tasks',
+    'statistics' => 'Statistics of the number of tasks of the course'
 ];

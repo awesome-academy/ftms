@@ -24,6 +24,12 @@
                         <i class="ti-book"></i><span>@lang('admin.course')</span>
                     </a>
                 </li>
+
+                <li class="{{ request()->routeIs('course.*') ? "active" : "" }}">
+                    <a href="{{ route('chart.index') }}" aria-expanded="true">
+                        <i class="ti-book"></i><span>@lang('admin.report')</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>

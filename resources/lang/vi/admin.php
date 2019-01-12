@@ -25,4 +25,8 @@ return [
     'course_status' => 'trạng thái',
     'started_at' => 'ngày bắt đầu',
     'finished_at' => 'ngày kết thúc',
+    'report' => 'Báo cáo',
+    'choose' => 'Vui lòng chọn khóa học',
+    'number' => 'Số lượng nhiệm vụ',
+    'statistics' => 'Thống kê số lượng nhiệm vụ của khóa học'
 ];
