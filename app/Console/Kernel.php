@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        'App\Console\Commands\NotifyMail',
     ];
 
     /**
@@ -25,6 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('update:status')->daily();
+        $schedule->command('notify:sendMail')->everyMinute();
     }
 
     /**
