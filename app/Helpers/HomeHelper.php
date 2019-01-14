@@ -73,4 +73,10 @@ class HomeHelper
 
         return $getID;
     }
+
+    public static function getSupervisor(){
+        $getSupervisor = User::where('role', 2)->get();
+
+        return $getSupervisor;
+    }
 }
