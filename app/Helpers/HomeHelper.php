@@ -73,4 +73,10 @@ class HomeHelper
 
         return $getID;
     }
+
+    public static function getIdOfTrainee(){
+        $getId = User::Where('id', config('setting.trainee'))->get();
+
+        return $getId;
+    }
 }
