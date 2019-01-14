@@ -89,6 +89,7 @@
                         <a href="#" class="btn btn-default btn-success">@lang('home.btnDone')</a>
                     @else
                         {!! Form::open(['route'=>'subject.store', 'method' => 'POST']) !!}
+                        <meta name="csrf-token" content="{{ csrf_token() }}">
                             {!! Form::hidden('id_subject', $subject->id) !!}
                             {!! Form::submit(trans('home.finish'), ['class' => 'btn btn-default btn-primary']) !!}
                         {!! Form::close() !!}

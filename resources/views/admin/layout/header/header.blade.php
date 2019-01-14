@@ -1,19 +1,26 @@
-<div class="row align-items-center">
-    <div class="col-md-6 col-sm-8 clearfix">
-        <div class="nav-btn pull-left">
-            <span></span>
-            <span></span>
-            <span></span>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown dropdown-notifications">
+                    <a href="#notifications-panel" class="dropdown-toggle" data-toggle="dropdown">
+                        <i data-count="0" class="glyphicon glyphicon-bell notification-icon"></i>
+                    </a>
+                    <div class="dropdown-container">
+                        <div class="dropdown-toolbar">
+                            <div class="dropdown-toolbar-actions">
+                                scripts      <a href="#">Mark all as read</a>
+                            </div>
+                            <h3 class="dropdown-toolbar-title">Notifications (<span class="notif-count">0</span>)</h3>
+                        </div>
+                        <ul class="dropdown-menu">
+                        </ul>
+                        <div class="dropdown-footer text-center">
+                            <a href="#">View All</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-
-    <div class="col-md-6 col-sm-4 clearfix">
-        <ul class="notification-area pull-right">
-            <li id="full-view"><i class="ti-fullscreen"></i></li>
-            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
-            <li class="settings-btn">
-                <i class="ti-settings"></i>
-            </li>
-        </ul>
-    </div>
-</div>
+</nav>

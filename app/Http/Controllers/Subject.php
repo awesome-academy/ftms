@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Helpers\HomeHelper;
 use App\Models\Course_Subject;
+use App\Mail\SendMailable;
+use Auth;
+use Illuminate\Support\Facades\Mail;
+use Pusher\Pusher;
 
 class Subject extends Controller
 {
@@ -36,6 +40,30 @@ class Subject extends Controller
      */
     public function store(Request $req)
     {
+        $user = Auth::user();
+        $send['name'] = $user->name;
+        $getSubject = HomeHelper::getSubjectDetail($req->id_subject);
+        $send['subject'] = $getSubject->name;
+        $getSupervisors = HomeHelper::getSupervisor();
+        foreach($getSupervisors as $getSupervisor){
+            Mail::to($getSupervisor->email)->send(new SendMailable($send));
+        }
+
+        $data['title'] = 'I would like to announce ';
+        $data['content'] = '$user->name have completed this subject which called $getSubject->name ';
+        $options = array(
+            'cluster' => 'ap1',
+            'encrypted' => true
+        );
+        $pusher = new Pusher(
+            env('PUSHER_APP_KEY'),
+            env('PUSHER_APP_SECRET'),
+            env('PUSHER_APP_ID'),
+            $options
+        );
+
+        $pusher->trigger('Notify', 'send-message', $data);
+
         $getId = HomeHelper::getIdSubject($req->id_subject);
         $finish = Course_Subject::find($getId->id);
         $finish->end_subject = now();
