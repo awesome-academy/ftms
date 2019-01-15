@@ -66,4 +66,5 @@ Route::group(['middleware' => 'checkLoginAdmin'], function (){
     Route::resource('trainee', 'Trainee');
     Route::resource('course', 'Course');
     Route::resource('subjectStructure', 'SubjectStructure');
+    Route::resource('chart', 'Chart');
 });
